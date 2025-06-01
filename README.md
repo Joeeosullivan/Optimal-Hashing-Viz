@@ -45,7 +45,7 @@ Visit the live application: [Coming Soon - Deploy to Vercel]
 
 ```bash
 # Clone the repository
-git clone <your-repo-url>
+git clone https://github.com/Joeeosullivan/Optimal-Hashing-Viz.git
 cd optimal-hashing-visualization
 
 # Install dependencies
