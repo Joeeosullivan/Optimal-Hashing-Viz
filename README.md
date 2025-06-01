@@ -31,7 +31,7 @@ This project demonstrates the groundbreaking algorithms that disprove Yao's 1985
 
 ## 🚀 Live Demo
 
-Visit the live application: [Coming Soon - Deploy to Vercel]
+Visit the live application: **[https://optimal-hashing-viz.vercel.app](https://optimal-hashing-viz.vercel.app)**
 
 ## 🛠️ Technology Stack
 
