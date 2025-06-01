@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+}
+
+@layer components {
+  .hash-table-cell {
+    @apply w-16 h-16 border-2 border-gray-200 rounded-lg flex items-center justify-center transition-all duration-300;
+  }
+  
+  .hash-table-cell.empty {
+    @apply bg-white hover:bg-gray-50;
+  }
+  
+  .hash-table-cell.occupied {
+    @apply bg-hash-primary text-white font-semibold;
+  }
+  
+  .hash-table-cell.probing {
+    @apply bg-yellow-200 border-yellow-400;
+  }
+  
+  .hash-table-cell.inserting {
+    @apply bg-green-200 border-green-400;
+  }
+  
+  .complexity-card {
+    @apply bg-white rounded-xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300;
+  }
+  
+  .algorithm-selector {
+    @apply px-4 py-2 rounded-lg font-medium transition-all duration-200 cursor-pointer;
+  }
+  
+  .algorithm-selector.active {
+    @apply bg-hash-primary text-white shadow-md;
+  }
+  
+  .algorithm-selector.inactive {
+    @apply bg-gray-100 text-gray-600 hover:bg-gray-200;
+  }
+  
+  .probe-sequence-step {
+    @apply inline-flex items-center justify-center w-8 h-8 rounded-full bg-hash-primary text-white text-sm font-mono mr-2 mb-2;
+  }
+  
+  .interactive-slider {
+    @apply w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer;
+  }
+  
+  .interactive-slider::-webkit-slider-thumb {
+    @apply appearance-none w-5 h-5 bg-hash-primary rounded-full cursor-pointer;
+  }
+}
+
+/* Animations */
+@keyframes probe {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); background-color: rgb(254 240 138); }
+}
+
+@keyframes insert {
+  0% { transform: scale(1); background-color: rgb(187 247 208); }
+  50% { transform: scale(1.2); background-color: rgb(34 197 94); }
+  100% { transform: scale(1); background-color: rgb(59 130 246); }
+}
+
+.animate-probe {
+  animation: probe 0.6s ease-in-out;
+}
+
+.animate-insert {
+  animation: insert 0.8s ease-in-out;
+} 
